@@ -1,0 +1,140 @@
+//[]---------------------------------------------------------------[]
+//|                                                                 |
+//| Copyright (C) 2019, 2026 Paulo Pagliosa.                        |
+//|                                                                 |
+//| This software is provided 'as-is', without any express or       |
+//| implied warranty. In no event will the authors be held liable   |
+//| for any damages arising from the use of this software.          |
+//|                                                                 |
+//| Permission is granted to anyone to use this software for any    |
+//| purpose, including commercial applications, and to alter it and |
+//| redistribute it freely, subject to the following restrictions:  |
+//|                                                                 |
+//| 1. The origin of this software must not be misrepresented; you  |
+//| must not claim that you wrote the original software. If you use |
+//| this software in a product, an acknowledgment in the product    |
+//| documentation would be appreciated but is not required.         |
+//|                                                                 |
+//| 2. Altered source versions must be plainly marked as such, and  |
+//| must not be misrepresented as being the original software.      |
+//|                                                                 |
+//| 3. This notice may not be removed or altered from any source    |
+//| distribution.                                                   |
+//|                                                                 |
+//[]---------------------------------------------------------------[]
+//
+// OVERVIEW: PointHolder.h
+// ========
+// Class definition for point holder.
+//
+// Author: Paulo Pagliosa
+// Last revision: 26/10/2026
+
+#ifndef __PointHolder_h
+#define __PointHolder_h
+
+#include "core/Rearrange.h"
+#include "geometry/Bounds3.h"
+#include "geometry/PointIndexTraits.h"
+
+namespace cg
+{ // begin namespace cg
+
+template <IsIntegral I, typename PA>
+[[nodiscard]] constexpr auto
+isPointActive(const PA&, I)
+{
+  return true;
+}
+
+
+/////////////////////////////////////////////////////////////////////
+//
+// PointHolder: point holder class
+// ===========
+template <int D, IsReal R, typename PA>
+class PointHolder
+{
+public:
+  using Bounds = cg::Bounds<R, D>;
+
+  [[nodiscard]] const auto& points() const
+  {
+    return *_points;
+  }
+
+  [[nodiscard]] auto& points()
+  {
+    return *_points;
+  }
+
+  template <IsIntegral I>
+  [[nodiscard]] auto isPointActive(I index) const
+  {
+    using cg::isPointActive;
+    return isPointActive(*_points, index);
+  }
+
+  /// Returns the bounds of the active points (a cube, if squared),
+  /// read by the position accessor (see PointIndexTraits.h).
+  template <typename Position = pa::DefaultPosition>
+  [[nodiscard]] static Bounds computeBounds(const PA&,
+    bool squared = false,
+    const Position& position = {});
+
+protected:
+  PointHolder(PA& points):
+    _points{&points}
+  {
+    // do nothing
+  }
+
+  template <typename P, typename Position = pa::DefaultPosition>
+  void setPositions(const P& points, Position position = {})
+  {
+    const auto n = _points->size();
+
+    assert(n == points.size());
+    for (decltype(n) i = 0; i < n; ++i)
+      position(*_points, i).set(points[i]);
+  }
+
+  void setPoints(PA& points)
+  {
+    _points = &points;
+  }
+
+private:
+  PA* _points;
+
+}; // PointHolder
+
+template <int D, IsReal R, typename PA>
+template <typename Position>
+auto
+PointHolder<D, R, PA>::computeBounds(const PA& points,
+  bool squared,
+  const Position& position) -> Bounds
+{
+  using cg::isPointActive;
+  using psize_t = decltype(points.size());
+
+  Bounds bounds;
+
+  for (psize_t n = points.size(), i = 0; i < n; ++i)
+    if (isPointActive(points, i))
+      bounds.extend(Vector<R, D>{position(points, i)});
+  if (squared)
+  {
+    auto s = Vector<R, D>{bounds.maxExtent() * R(0.5)};
+    auto c = bounds.center();
+
+    bounds.extend(c - s);
+    bounds.extend(c + s);
+  }
+  return bounds;
+}
+
+} // namespace cg
+
+#endif // __PointHolder_h
