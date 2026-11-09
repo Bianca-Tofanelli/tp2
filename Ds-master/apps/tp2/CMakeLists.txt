@@ -14,6 +14,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 add_executable(myapp
   Main.cpp
   MainWindow.cpp
+  MyMaterial.cpp
 )
 
 # cg library (prebuilt in ../../cg/lib): includes, definitions and dependencies
