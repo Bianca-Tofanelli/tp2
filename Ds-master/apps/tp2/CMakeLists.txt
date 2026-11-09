@@ -14,6 +14,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 add_executable(cgdemo
   Main.cpp
   MainWindow.cpp
+  MyMaterial.cpp
+  MyMaterial.h
+  MyPhongMaterial.cpp
+  MyPhongMaterial.h
   RayTracer.cpp
   SceneWriter.cpp
   Writer.cpp
