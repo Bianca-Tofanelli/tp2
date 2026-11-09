@@ -1,8 +1,12 @@
 #include "MyMaterial.h"
 
-MyMaterial::MyMaterial(const cg::Color& color) : cg::Material(color) {
+namespace cg {
+
+    // Repassando a cor para a classe mãe, exatamente como você tinha feito!
+    MyMaterial::MyMaterial(const Color& color) : Material(color) {
     }
 
-MyMaterial::~MyMaterial() {
-   
-}
+    MyMaterial::~MyMaterial() {
+    }
+
+} // Fim do namespace cg

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\bibit\OneDrive\Documentos\GitHub\tp2\Ds-master\cg\build\CMakeFiles\_CMakeLTOTest-C\bin\CMakeFiles\bf6bc02b2318a959de944c8108652cbe\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{787EDD90-19C5-3895-95F3-B14E5702DDBA}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

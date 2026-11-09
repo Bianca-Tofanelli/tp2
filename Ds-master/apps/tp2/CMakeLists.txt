@@ -15,6 +15,7 @@ add_executable(myapp
   Main.cpp
   MainWindow.cpp
   MyMaterial.cpp
+  MyPhongMaterial.cpp
 )
 
 # cg library (prebuilt in ../../cg/lib): includes, definitions and dependencies
