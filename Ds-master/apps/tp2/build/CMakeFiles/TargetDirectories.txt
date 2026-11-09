@@ -1,0 +1,3 @@
+C:/Users/bibit/OneDrive/Documentos/GitHub/tp2/Ds-master/apps/tp2/build/CMakeFiles/cgdemo.dir
+C:/Users/bibit/OneDrive/Documentos/GitHub/tp2/Ds-master/apps/tp2/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/bibit/OneDrive/Documentos/GitHub/tp2/Ds-master/apps/tp2/build/CMakeFiles/ZERO_CHECK.dir

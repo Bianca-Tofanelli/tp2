@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\bibit\OneDrive\Documentos\GitHub\tp2\Ds-master\apps\tp2\Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\bibit\OneDrive\Documentos\GitHub\tp2\Ds-master\apps\tp2\MainWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\bibit\OneDrive\Documentos\GitHub\tp2\Ds-master\apps\tp2\MyMaterial.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\bibit\OneDrive\Documentos\GitHub\tp2\Ds-master\apps\tp2\MyPhongMaterial.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\bibit\OneDrive\Documentos\GitHub\tp2\Ds-master\apps\tp2\RayTracer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\bibit\OneDrive\Documentos\GitHub\tp2\Ds-master\apps\tp2\SceneWriter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\bibit\OneDrive\Documentos\GitHub\tp2\Ds-master\apps\tp2\Writer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\bibit\OneDrive\Documentos\GitHub\tp2\Ds-master\apps\tp2\reader\AbstractParser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\bibit\OneDrive\Documentos\GitHub\tp2\Ds-master\apps\tp2\reader\Buffer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\bibit\OneDrive\Documentos\GitHub\tp2\Ds-master\apps\tp2\reader\ErrorHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\bibit\OneDrive\Documentos\GitHub\tp2\Ds-master\apps\tp2\reader\Expression.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\bibit\OneDrive\Documentos\GitHub\tp2\Ds-master\apps\tp2\reader\FileBuffer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\bibit\OneDrive\Documentos\GitHub\tp2\Ds-master\apps\tp2\reader\ReaderBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\bibit\OneDrive\Documentos\GitHub\tp2\Ds-master\apps\tp2\reader\SceneReader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\bibit\OneDrive\Documentos\GitHub\tp2\Ds-master\apps\tp2\reader\Scope.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\bibit\OneDrive\Documentos\GitHub\tp2\Ds-master\apps\tp2\MyMaterial.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\bibit\OneDrive\Documentos\GitHub\tp2\Ds-master\apps\tp2\MyPhongMaterial.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\bibit\OneDrive\Documentos\GitHub\tp2\Ds-master\apps\tp2\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{8EF31F11-CCD2-3BCA-8EB6-0DF5DEF7BCB7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{FE3A0AA3-D602-370B-87AE-748583585769}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
